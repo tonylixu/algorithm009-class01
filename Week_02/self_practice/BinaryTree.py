@@ -1,5 +1,9 @@
+"""BinaryTree class implementation"""
+
+
 class BinaryTree:
     def __init__(self, root_obj):
+        """Init Binary tree"""
         self.root = root_obj
         self.left_child = None
         self.right_child = None
