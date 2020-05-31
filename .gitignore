@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Mac
+.DS*
+
 # Distribution / packaging
 .Python
 build/
@@ -130,3 +133,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# No Pycharm
+*.idea
