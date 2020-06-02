@@ -49,7 +49,41 @@ def calculate_sum(nums):
     if len(nums) == 1:
         return nums[0]
     # Process logic in current level
-    # and Drill down to next level
+    #     - At each level, the sum = nums[0] + nums[1:]
+    # Drill down to next level
+    #     - We pass nums[1:] to the next level
     # No need to do cleanups
+    #     - Nothing to do here
     return nums[0] + calculate_sum(nums[1:])
+```
+* Convert integer to str (base 2~16). For a given integer, return the base(n) string
+representation. Base n is between 2 to 16
+```python
+def to_string(num, base):
+    """
+    Convert num to base string format
+    
+    Time complexity: O(log_base n)
+    Space complexity: O(1)
+    """
+    convert_string = '0123456789ABCDEF'
+    # Recursion terminator
+    if num < base:
+        return convert_string[num]
+    # Process logic in current level
+    #     - Append this level converted string
+    # Drill down to next level
+    #     - Call itself on num//base --> A little closer to solution
+    # Cleanups
+    #     - Nothing to do here
+    return to_string(num//base, base) + convert_string[num%base]
+
+stack = []
+convert_string = '0123456789ABCDEF'
+def to_string_stack(num, base):
+    if num < base:
+        stack.append(convert_string[num])
+        return
+    stack.append(convert_string[num%base])
+    to_string_stack(num//base, base)
 ```
