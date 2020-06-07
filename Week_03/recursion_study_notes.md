@@ -30,7 +30,7 @@ def recursion(level, param_1, param_2, ...):
     # Reverse the current level status if needed
 ```
 
-### 递归简单题目
+### 递归题目
 * 计算数字列表的和， 给定数字列表nums = [1, 3, 5, 7, 9, 10, 11]，用递归的办法求出nums的和。
 ```python
 def calculate_sum(nums):

@@ -1,3 +1,6 @@
+# Good solution:
+# https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/236-er-cha-shu-de-zui-jin-gong-gong-zu-xian-hou-xu/
+
 def own_solution(root, p, q):
     if not root or root == p or root == q:
         return root
@@ -29,3 +32,4 @@ def better_solution(root, p, q):
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        better_solution(root, p, q)
