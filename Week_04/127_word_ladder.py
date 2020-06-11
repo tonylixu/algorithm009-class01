@@ -1,3 +1,9 @@
+"""
+Leetcode good solution:
+https://leetcode-cn.com/problems/word-ladder/solution/dan-ci-jie-long-by-leetcode/
+
+"""
+
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         return self.bfs(beginWord, endWord, wordList)

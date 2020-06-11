@@ -26,7 +26,7 @@ class Solution:
         Each leaf node is an answer.
 
         Time complexity: O(NxN!)
-        Space complexityL O(NxN!) = O(logN) + O(NxN!) = O(NxN!)
+        Space complexity: O(NxN!) = O(logN) + O(NxN!) = O(NxN!)
         """
         # Recursion terminator
         if not nums:
