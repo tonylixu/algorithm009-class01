@@ -80,3 +80,35 @@ class Solution:
                         visited.add(word)
                         queue.append((word, level + 1))
         return 0
+
+    def bfs2(self, beginWord, endWord, wordList):
+        if endWord not in wordList:
+            return 0
+
+        L = len(beginWord)
+        visited = set()
+        queue = [(beginWord, 1)]
+
+        # Build helper
+        wordList += [beginWord]
+        all_combo_dict = defaultdict(list)
+        for word in wordList:
+            for i in range(L):
+                all_combo_dict[word[:i] + '*' + word[i + 1:]].append(word)
+
+        # Build graph
+        graph = defaultdict(list)
+        for words in all_combo_dict.values():
+            for i in range(len(words)):
+                graph[words[i]].extend(words[:i] + words[i + 1:])
+
+        while queue:
+            curr_word, level = queue.pop(0)
+            for word in graph[curr_word]:
+                if word == endWord:
+                    return level + 1
+                else:
+                    if word not in visited:
+                        visited.add(word)
+                        queue.append((word, level + 1))
+        return 0

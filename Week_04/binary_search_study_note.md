@@ -17,13 +17,10 @@
 
 
 ### 实战题目
-* [332. Coin Change](https://leetcode.com/problems/coin-change/)
-  * 当硬币可选集合固定，例如 [20, 10, 5, 1]，用贪心法是可以找到最优解的 (因为选择里面都是可以整除
-  的关系)，但是当硬币可选记变成 [10, 9, 1]的时候，贪心法就不一定适用了。
-* [55. Jump Game](https://leetcode.com/problems/jump-game/)
-  * [Python solution](./55_jump_game.py)
-* [860. Lemonade Change](https://leetcode.com/problems/lemonade-change/)
-  * [Python solution](./860_lemonade_change.py)
+* 半有序数组
+  * [Python solution](./half_sorted.py)
+* [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+  * [Python solution](./33_search_in_rotated_sorted_array.py)
 * [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
   * [Python solution](./122_best_time_to_buy_and_sell_stock_ii.py)
   
